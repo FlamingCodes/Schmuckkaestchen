@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:body>
+       <ui:composition>
+       <h:form class="shopList_form">
+	 		<table class="shopList_table">
+	 			<!--<c:forEach items="#{vo.headers}" var="col">
+	 				<th class="shopList_th">#{col}</th>
+	 			</c:forEach> -->
+			    <c:forEach items="#{vo.content}" var="row">
+					<tr>
+						<ui:param name="header" value="#{row.name}"/>
+						<ui:param name="description" value="#{row.description}"/>
+						<ui:param name="price" value="#{row.price}"/>
+						<ui:param name="src" value="#{row.imgPath}"/>
+						<ui:param name="id" value="#{row.id}"/>
+						<ui:insert name="element" >
+      				    	<ui:include src="/templates/shopList_editElement.xhtml" />
+   						</ui:insert> 
+					</tr>
+				</c:forEach>
+			</table>
+			<h:commandButton value="#{bean.editShopActionName()}" action="#{bean.editShopListAction()}"></h:commandButton>
+       </h:form>
+       </ui:composition>
+    </h:body>
+</html>

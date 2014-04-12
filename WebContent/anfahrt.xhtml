@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+	<title>Schmuckkästchen - Wuppertal</title>
+	<meta name="description" content="Goldankauf Mahnert" />
+	<meta name="author" content="Kai Lichtinghagen" />
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</h:head>
+<h:body>
+	<script src="js/scripts.js"></script>
+	<div id="wrapper">
+		<ui:insert name="header">
+			<ui:include src="templates/header.xhtml" />
+		</ui:insert>
+		<div id="content_wrapper">
+			<ui:insert name="menu">
+				<ui:include src="templates/menu.xhtml" />
+			</ui:insert>
+			<!-- BEGIN CONTENT -->
+			<div class="content_head" id="content_head_anfahrt"></div>
+			<div id="content">
+				<h3 id="content_head_text">Anfahrt</h3>
+				<div id="how_to_arive">
+					<h4>Adresse</h4>
+					<p>
+						<span class="bigFont">Goldankauf Schmuckkästchen Wuppertal
+							<br /> W. Mahnert<br />
+						</span>Neumarkt. 10 (Rathaus-Friedrichtstr.)<br /> 42103 Wuppertal<br />
+						Tel.: 0202/442053<br /> E-Mail: schuckkaestchen-wuppertal@gmx.de
+					</p>
+					<h4>Öffnungszeiten:</h4>
+					<table>
+						<tr>
+							<td>Montag – Freitag</td>
+							<td>von 10.00 bis 17.00 Uhr</td>
+						</tr>
+						<tr>
+							<td>Samstag</td>
+							<td>von 10.00 bis 14.00 Uhr</td>
+						</tr>
+						<tr>
+							<td>Sonntag und Feiertags</td>
+							<td>geschlossen.</td>
+						</tr>
+					</table>
+
+					<br /> <br /> <br /> <br /> <br /> <br />
+					<h4>Mit Öffentlichen Verkehrsmitteln</h4>
+					<p>
+						Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br />
+						sed diam nonumy eirmod tempor invidunt ut
+					</p>
+					<h4>Mit dem Auto</h4>
+					<p>
+						Lorem ipsum dolor sit amet,<br /> consetetur sadipscing elitr,<br />
+						sed diam nonumy eirmod tempor invidunt ut
+					</p>
+				</div>
+				<div id="google_map">
+					<h5>Umgebungskarte</h5>
+					<iframe width="425" height="350" frameborder="0" scrolling="no"
+						marginheight="0" marginwidth="0"
+						src="https://maps.google.de/maps?f=d&amp;source=s_d&amp;saddr=&amp;daddr=51.25914,7.146504&amp;hl=de&amp;geocode=&amp;sll=51.259296,7.146505&amp;sspn=0.004088,0.006968&amp;t=h&amp;mra=mift&amp;mrsp=1&amp;sz=18&amp;ie=UTF8&amp;ll=51.259296,7.146505&amp;spn=0.004088,0.006968&amp;output=embed"></iframe>
+					<br /> <small><a
+						href="https://maps.google.de/maps?f=d&amp;source=embed&amp;saddr=&amp;daddr=51.25914,7.146504&amp;hl=de&amp;geocode=&amp;sll=51.259296,7.146505&amp;sspn=0.004088,0.006968&amp;t=h&amp;mra=mift&amp;mrsp=1&amp;sz=18&amp;ie=UTF8&amp;ll=51.259296,7.146505&amp;spn=0.004088,0.006968"
+						style="color: #0000FF; text-align: left" target="outsite">Größere
+							Kartenansicht und Routenplaner</a></small>
+				</div>
+			</div>
+			<!-- end content -->
+			<!--  END CONTENT -->
+		</div>
+		<!-- end content_wrapper -->
+		<ui:insert name="footer">
+			<ui:include src="templates/footer.xhtml" />
+		</ui:insert>
+	</div>
+	<!-- end wrapper -->
+</h:body>
+</html>

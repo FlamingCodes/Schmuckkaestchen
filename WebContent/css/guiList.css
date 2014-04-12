@@ -1,0 +1,51 @@
+.guiList_table {
+	vertical-align: center;
+	border-collapse:collapse;
+	width: 100%;
+	margin: 0;
+	border: 1px solid black;
+	padding: 0;	
+}
+
+.guiList_th {
+	text-align: left;
+}
+
+.guiList_td {
+	margin: 0;
+	padding: 3px;	
+}
+
+.guiList_checkbox {
+	display: none;
+}
+
+.guiList_checkbox + label{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+	background-image: url(../pics/checkbox_orange_unchecked.png);
+}
+
+.guiList_checkbox:checked + label{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+	background-image: url(../pics/checkbox_orange_checked.png);
+}
+
+.guiList_Color_1 {
+	margin: 0;
+	padding:0; 
+	background-color: white;	
+}
+.guiList_Color_2 {
+	margin: 0;
+	padding:0; 
+	background-color: #07C;	
+}
+}

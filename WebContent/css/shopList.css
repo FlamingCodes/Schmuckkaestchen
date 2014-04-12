@@ -1,0 +1,54 @@
+.shopList_currency {
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #333;
+}
+.shopList_element_button {
+	maring: 0;
+	padding: 5px;
+	float: right;
+	width: 100%;
+	display: block;
+}
+.shopList_element_button input {
+	float: right;	
+}
+.shopList_element {
+	float: left;
+	width: 100%;
+	border: 1px solid black;
+	margin: 0;
+	padding: 0;
+}
+
+.shopList_element_image {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	height: 100px;
+}
+
+.shopList_element_image_ {
+	width: 100px;
+	height: 100px;
+}
+
+.shopList_element_content {
+	float: left;
+	margin: 0;
+	padding: 6px;
+}
+
+.shopList_element_price {
+	font-weight: bolder;
+	text-align: right;
+	float: right;
+	margin: 0;
+	padding: 6px;
+}
+
+.shopList_element_description {
+	color: #999;
+	font-style: italic;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+  <title>Schmuckkästchen - Wuppertal</title>
+  <meta name="description" content="Goldankauf Mahnert"/>
+  <meta name="author" content="Kai Lichtinghagen"/>
+  <link rel="stylesheet"  href="./css/main.css"/>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</h:head>
+<h:body>
+  <script src="js/scripts.js"></script>
+  <div id="wrapper">
+      <ui:insert name="header" >
+          <ui:include src="templates/header.xhtml" />
+   	  </ui:insert> 
+      <div id="content_wrapper">
+      		<ui:insert name="menu" >
+                <ui:include src="templates/menu.xhtml" />
+   	    	</ui:insert> 
+<!-- BEGIN CONTENT -->
+	    <div class="content_head" id="content_head_anfahrt"></div>
+        <div id="content">
+        	<h3 id="content_head_text">Default</h3>
+
+		</div> <!-- end content -->
+<!--  END CONTENT -->
+      </div> <!-- end content_wrapper -->
+      <ui:insert name="footer" >
+         <ui:include src="templates/footer.xhtml" />
+   	  </ui:insert> 
+  </div> <!-- end wrapper -->
+</h:body>
+</html>

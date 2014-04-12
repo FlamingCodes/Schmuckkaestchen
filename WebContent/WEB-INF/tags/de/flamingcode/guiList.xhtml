@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:body>
+       <ui:composition>
+       <h:form id="guiList_form">
+	 		<table class="guiList_table">
+				<c:if test="#{gldo.markable}">
+					<th></th>
+				</c:if>
+	 			<c:forEach items="#{gldo.headers}" var="col">
+	 				<th class="guiList_th">#{col}</th>
+	 			</c:forEach>
+			    <c:forEach items="#{gldo.content}" var="row">
+					<tr class="#{row.getStyleClass()}">
+						<c:if test="#{gldo.markable}">
+							<td class="guiList_td">
+								<h:selectBooleanCheckbox styleClass="guiList_checkbox" id="c#{row.id}" value="#{row.marked}"/>
+								<label for="guiList_form:c#{row.id}"></label>
+							</td>
+						</c:if>
+						<c:forEach items="#{row.content}" var="col">
+							<td class="guiList_td">#{col}</td>
+						</c:forEach>
+					</tr>
+				</c:forEach>
+			</table>
+			<h:commandButton value="#{bean.actionName()}" action="#{bean.guiListAction()}"></h:commandButton>
+       </h:form>
+       </ui:composition>
+    </h:body>
+</html>

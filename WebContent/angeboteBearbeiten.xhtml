@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fcode="http://flamingcode.de/facelets">
+<h:head>
+
+  <title>Schmuckkästchen - Wuppertal</title>
+  <meta name="description" content="Goldankauf Mahnert"/>
+  <meta name="author" content="Kai Lichtinghagen"/>
+  <link rel="stylesheet"  href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/shopList.css"/>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</h:head>
+<h:body>
+  <script src="js/scripts.js"></script>
+  <div id="wrapper">
+      <ui:insert name="header" >
+          <ui:include src="templates/header.xhtml" />
+   	  </ui:insert> 
+      <div id="content_wrapper">
+      		<ui:insert name="menu" >
+                <ui:include src="templates/menu.xhtml" />
+   	    	</ui:insert> 
+<!-- BEGIN CONTENT -->
+	    <div class="content_head" id="content_head_anfahrt"></div>
+        <div id="content">
+        	<h3 id="content_head_text">Angebote</h3>
+		<c:if test="#{angeboteBean.login}">
+			<fcode:editShopList bean="#{angeboteBean}"  id="ID"  alt="alternativer text" vo="#{angeboteBean.vo}"/>
+			<h:button outcome="angebotHinzufuegen.jsf" value="Angebot Hinzufügen"/>
+			
+		</c:if>
+		<c:if test="#{angeboteBean.login == false}">
+			<div id="login_form">
+				<h:form>
+					<table>
+					<tr>
+						<td>
+							<h:outputLabel value="Benutzername"/>
+						</td>
+						<td>
+							<h:inputText id="login_name" value="#{angeboteBean.username}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h:outputLabel value="Password"/>
+						</td>
+						<td>
+							<h:inputSecret id="login_password" value="#{angeboteBean.password}"/>
+						</td>
+					</tr>
+					</table>
+					<h:commandButton action="#{angeboteBean.logMeIn()}" value="login"/>
+				</h:form>
+			</div>
+		</c:if>
+		</div> <!-- end content -->
+<!--  END CONTENT -->
+      </div> <!-- end content_wrapper -->
+      <ui:insert name="footer" >
+         <ui:include src="templates/footer.xhtml" />
+   	  </ui:insert> 
+  </div> <!-- end wrapper -->
+</h:body>
+</html>

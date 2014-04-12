@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<body>
+		<ui:composition>
+	        <div class="shopList_element">
+	        	<div class="shopList_element_image">
+	        		<h:graphicImage styleClass="shopList_element_image_" value="#{src}" alt="#{alt}"/>
+	        	</div>
+	        	<div class="shopList_element_content">
+	        		<h4 class="shopList_element_name">#{header}</h4>
+	        		<p class="shopList_element_description">#{description}</p>
+	        	</div>
+	        	<div class="shopList_element_price">
+	        		<h:outputText styleClass="shopList_currency" value="EUR "/> #{price}
+	        	</div>
+	        </div>
+	    </ui:composition>
+	</body>
+</html>
